@@ -30,8 +30,8 @@ async function startStream(){
     }
 
     const app = express(),
-    publicOutputDirectory = path.join('public', 'output')
-
+    publicOutputDirectory = path.join('public/')//, 'output')
+    console.log('output directory: ' + publicOutputDirectory);
     app.use('/', express.static('public'))
     app.listen(PORT, () => {
         console.log(
