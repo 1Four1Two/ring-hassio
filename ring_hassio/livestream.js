@@ -39,8 +39,10 @@ async function startStream(){
         )
     })
 
-    if (!(await util.promisify(fs.exists)(publicOutputDirectory))) {
+    if (!(await util.promisify(fs.access)(publicOutputDirectory))) {
+        console.log('Folder not found')
         await util.promisify(fs.mkdir)(publicOutputDirectory)
+        console.log('Folder created')
       }
     
       const sipSession = await camera.streamVideo({
