@@ -9,7 +9,7 @@ lerna-debug.log*
 #env
 public/output
 .env
-*.m3u8
+#*.m3u8
 stream[0-9]*.ts
 # Diagnostic reports (https://nodejs.org/api/report.html)
 report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json
@@ -45,7 +45,7 @@ build/Release
 # Dependency directories
 node_modules/
 jspm_packages/
-public/
+# public/
 data/
 
 # TypeScript v1 declaration files
